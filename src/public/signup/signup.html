@@ -42,8 +42,8 @@
 				<span><strong>Phone No</strong></span> 
 			</div>
 			<div width="30%">
-				<input type="tel" name="phone" placeholder="Enter Your Phone No" ng-model="signupCtrl.phone" pattern="(^[789]\d{9}$)" required> 
-				<span ng-if="regForm.phone.$invalid && regForm.phone.$touched"> Must be a valid phone number : [Starts with 7 8 9] - Total 9 Digits 
+				<input type="tel" name="phone" placeholder="Enter Your Phone No" ng-model="signupCtrl.phone" pattern="(^[0123456789]\d{9}$)" required> 
+				<span ng-if="regForm.phone.$invalid && regForm.phone.$touched"> Insert a valid phone number valid phone number :  Total 9 Digits 
 				</span> 
 			</div>
 		</div>
@@ -52,7 +52,7 @@
 				<span><strong>Menu Item No</strong></span> 
 			</div>
 			<div width="30%">
-				<input ng-change="signupCtrl.clearDisplayMsg()" ng-blur="signupCtrl.onChangeMenuNo()" type="text" name="menuno" placeholder="Enter your Most Favourite Menu No Ex.L1 / B13 etc" ng-model="signupCtrl.menuno"> 
+				<input ng-change="signupCtrl.clearDisplayMsg()" ng-blur="signupCtrl.onChangeMenuNo()" type="text" name="menuno" placeholder="Enter your Favorite ex. B1 " ng-model="signupCtrl.menuno"> 
 				<span ng-if="signupCtrl.menuShowFlag == 'false'"> No such menu number exists</span> 
 				<span ng-if="signupCtrl.menuShowFlag == 'true'"> Menu Exists: [ <b>Short Code : - {{signupCtrl.menuno | uppercase}} </b>] [<b>Menu Name:- {{signupCtrl.menuFullName | uppercase}} </b>]</span> 
 		</div>
@@ -67,11 +67,11 @@
 	<div id="info" ng-if="signupCtrl.completed"> 
 		<h1 style="color:green;"> Your information has been saved</h1>
 		<table style="background-color:black; " width="50%">		
-			<tr style="border:3px green solid" ><td width="30%">First Name 	</td><td width="20%">{{ signupCtrl.firstName}} 	</td></tr>
-			<tr style="border:3px green solid" ><td width="30%">Last Name 	</td><td width="20%">{{ signupCtrl.lastName}} 	</td></tr>
-			<tr style="border:3px green solid" ><td width="30%">Email ID 	</td><td width="20%">{{ signupCtrl.email}} 		</td></tr>
-			<tr style="border:3px green solid" ><td width="30%">Phone No 	</td><td width="20%">{{ signupCtrl.phone}} 		</td></tr>
-			<tr style="border:3px green solid" ><td width="30%">Favourite Menu No </td><td width="20%">{{ signupCtrl.menuno}} </td></tr>
+			<tr style="border:3px white solid" ><td width="50%">First Name 	</td><td width="20%">{{ signupCtrl.firstName}} 	</td></tr>
+			<tr style="border:3px white solid" ><td width="50%">Last Name 	</td><td width="20%">{{ signupCtrl.lastName}} 	</td></tr>
+			<tr style="border:3px white solid" ><td width="50%">Email ID 	</td><td width="20%">{{ signupCtrl.email}} 		</td></tr>
+			<tr style="border:3px white solid" ><td width="50%">Phone No 	</td><td width="20%">{{ signupCtrl.phone}} 		</td></tr>
+			<tr style="border:3px white solid" ><td width="50%">Favourite Menu No </td><td width="20%">{{ signupCtrl.menuno}} </td></tr>
 			</tr>
 		</table>		
 	</div> 
